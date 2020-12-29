@@ -63,7 +63,8 @@ typings/
 # Lib
 lib
 #CUSTOM
-.png
+*.png
+*.mcmeta
 
 examples/**/dist
 .cache

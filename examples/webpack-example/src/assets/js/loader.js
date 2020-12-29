@@ -1,0 +1,1 @@
+var loadEmote=function(filename,callback){$.get("raw/"+filename,function(data){callback(data);});}
