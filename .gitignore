@@ -62,7 +62,8 @@ typings/
 
 # Lib
 lib
-
+#CUSTOM
+.png
 
 examples/**/dist
 .cache

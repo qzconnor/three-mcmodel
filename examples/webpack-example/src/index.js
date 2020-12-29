@@ -11,9 +11,9 @@ const camera = new PerspectiveCamera(70, window.innerWidth / window.innerHeight,
 camera.position.set(16, 16, 64)
 
 // Create a mesh from the json model and add it to the scene
-new MinecraftModelLoader().load(require('./assets/cake.json'), mesh => {
+new MinecraftModelLoader().load(require('./assets/pixelglassesv2.json'), mesh => {
   const textureLoader = new MinecraftTextureLoader()
-  mesh.resolveTextures(path => textureLoader.load(require(`./assets/${path.substr(6)}.png`)))
+  mesh.resolveTextures(path => textureLoader.load(require(`./assets/${path}.png`)))
   scene.add(mesh)
 })
 
@@ -22,7 +22,7 @@ const wireframe = new LineSegments(
   new EdgesGeometry(new CubeGeometry(16, 16, 16)),
   new LineBasicMaterial({ color: 0x1111cc, linewidth: 3 })
 )
-scene.add(wireframe)
+//scene.add(wireframe)
 
 // Create the renderer and append it to the document body
 const renderer = new WebGLRenderer({ antialias: true, alpha: true })
